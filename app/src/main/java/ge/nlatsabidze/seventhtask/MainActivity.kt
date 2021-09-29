@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
 import android.text.TextUtils
+import android.text.method.PasswordTransformationMethod
 import android.util.Patterns
 import android.widget.Toast
 import android.widget.Toast.LENGTH_SHORT
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.passwordField.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+        binding.passwordField.setTransformationMethod(PasswordTransformationMethod.getInstance())
 
         val emailId = binding.emailField
         val passwordId = binding.passwordField
